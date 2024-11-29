@@ -1234,10 +1234,10 @@ cdef Bool hessian_struct_cb(Index n,
             log(msg, logging.ERROR)
             return False
 
-        if not(np_iRow >= np_jCol).all():
-            msg = b"Indices are not lower triangular in hessianstructure"
-            log(msg, logging.ERROR)
-            return False
+        # if not(np_iRow >= np_jCol).all():
+        #     msg = b"Indices are not lower triangular in hessianstructure"
+        #     log(msg, logging.ERROR)
+        #     return False
 
         if (np_jCol < 0).any():
             msg = b"Invalid column indices returned from hessianstructure"
